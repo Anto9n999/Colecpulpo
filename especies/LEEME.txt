@@ -1,0 +1,12 @@
+ILUSTRACIONES FINALES DE ESPECIES (opcional)
+
+Mientras no haya imagen, el juego dibuja cada especie de forma procedural (src/arte/).
+Para usar una ilustración definitiva, deja aquí un PNG con fondo TRANSPARENTE y el id de la especie:
+
+  public/especies/octopus-vulgaris.png
+  public/especies/enteroctopus-dofleini.png
+  ...
+
+El id es el nombre científico en minúsculas con guiones (ver src/data/especies.ts).
+La skin del ejemplar (patrón, paleta, acabado, desgaste) se aplica encima usando la silueta del PNG.
+En desarrollo aparece al momento; para la versión publicada, vuelve a ejecutar «npm run build».

@@ -1,0 +1,1 @@
+(function(){let e=self;e.onmessage=async t=>{let{id:n,bmp:r}=t.data;try{let t=new OffscreenCanvas(r.width,r.height);t.getContext(`2d`).drawImage(r,0,0),r.close();let i=await t.convertToBlob({type:`image/webp`,quality:.92});i.type!==`image/webp`&&(i=await t.convertToBlob({type:`image/png`})),e.postMessage({id:n,blob:i})}catch{e.postMessage({id:n,blob:null})}}})();
